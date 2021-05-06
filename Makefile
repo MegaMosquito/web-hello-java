@@ -1,4 +1,4 @@
-# A tool to monitor the local area network (LAN) "*/24" network using ARP.
+# Extremely simple HTTP server that responds on port 8000 with a hello message.
 
 DOCKERHUB_ID:=ibmosquito
 NAME:="web-hello-java"
@@ -22,7 +22,7 @@ run: stop
           -p 8000:8000 \
           $(DOCKERHUB_ID)/$(NAME):$(VERSION)
 
-check:
+test:
 	@curl -sS http://127.0.0.1:8000
 
 push:
