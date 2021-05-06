@@ -34,4 +34,4 @@ stop:
 clean:
 	@docker rmi -f $(DOCKERHUB_ID)/$(NAME):$(VERSION) >/dev/null 2>&1 || :
 
-.PHONY: build dev run push check stop clean
+.PHONY: build dev run push test stop clean
